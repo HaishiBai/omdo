@@ -1,0 +1,6 @@
+{
+	"o.wkf.name":"p.geo.longitude",
+	"o.wkf.description":"Longitude of a point on Earth (WGS84 geodetic datum), expressed in decimal form.",
+	"o.wkf.type":"numeric",
+	"o.wkf.example": -122.376
+}

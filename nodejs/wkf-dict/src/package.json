@@ -1,0 +1,28 @@
+{
+  "name": "wkf-dict",
+  "version": "0.0.1",
+  "description": "WKF MicroService reference implementation",
+  "main": "wkf-dict.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HaishiBai/omdo"
+  },
+  "keywords": [
+    "MicroService",
+    "Discovery",
+    "Orchestration",
+    "OMDO",
+    "WKF"
+  ],
+  "author": "hbai@microsoft.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaishiBai/omdo/issues"
+  },
+  "dependencies": {
+    "express": "^4.11.2"
+  }
+}
