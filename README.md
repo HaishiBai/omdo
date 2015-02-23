@@ -43,7 +43,7 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
 
 - **To discover a service that can look up street address by a lat/long coordinate (discover/delegate/consume)**:
 
-    my.protocol://omdo.cloudapp.net/o.geo.coordinate/v.recall?f.values=37,-122&f.expected=o.geo.address&f.delegate=true
+    my.protocol://omdo.cloudapp.net/o.geo.coordinate/v.recall?f.values=37,-122&f.expected=o.geo.address&f.delegate=true&f.directcall=true
     
     This request locates and invokes a service that can project a lat/long coordinate to a street address. The _m.delegate_ parameter informs the service handler that the request can be forwarded to other service providers. This parameter enables distributed registries, service delegations as well as service gateways that provide high-availability/failover capabilities.
 
