@@ -31,7 +31,7 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
 
 - **To calculate the sum of an array (discover/consume)**:
     
-    http://omdo.cloudapp.net:8280/p.math.numberlist/v.math.sum?m.value=1,2,3
+    http://omdo.cloudapp.net:8280/p.math.numberlist/v.math.sum?f.value=1,2,3
 
     This query calculates the sum of a number list. In this case, the _p.math.numberlist_ is a public WKF, and the _v.math.sum_ is a public WKV. _o.value_ is one of the few OMDO's reserved keywords that indicates the payload of a service call. 
 
