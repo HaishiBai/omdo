@@ -15,6 +15,15 @@
 		"complements":[
 			"f.value"
 		],
-		"url":"http://omdo.cloudapp.net:82820"
+		"url":"http://omdo.cloudapp.net:8280"
+	},
+	{
+		"name":"WKF lookup",
+		"object":"f.wkf",
+		"predicate":"v.read",
+		"complements":[
+			"f.wkf.name"
+		],
+		"url":"http://omdo.cloudapp.net:8280"
 	}
 ]

@@ -22,7 +22,7 @@ app.get('/*', function (req, res){
 				results.push(entry.url);
 		}
 	});
-	if (results.length > 0)
+	if (results.length == 0)
 	{
 		friends.forEach(function(friend){
 			var request = http.get(friend + req.path, function(response){
@@ -38,9 +38,26 @@ app.get('/*', function (req, res){
 			});
 		});		
 	}
-	res.send(results);
+	if (results.length > 0 
+	    && (words.indexOf('f.directcall')>=0 || req.query['f.directcall']=='true'))
+	{
+		var request = http.get(makeRequest(results[0], words),function(response){
+			res.send(response);
+		});
+		request.on('error',function(e){
+			res.status(500).send(e);
+		});
+	}
+	else
+		res.send(results);
 });
 
+function makeRequest(url, words)
+{
+	var address =  url + words[0] + '/' + words[1];
+	console.log("Target address: " + address);
+	return address;
+}
 var server = app.listen(8190, function(){
 	var host = server.address().address;
 	var port = server.address().port;
