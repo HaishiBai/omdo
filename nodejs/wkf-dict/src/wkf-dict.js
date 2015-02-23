@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var oWKFName = 'o.wkf.name';
 
-app.get('/o.wkf/read', function (req, res){
+app.get('/o.wkf/v.read', function (req, res){
 	var path = req.query[oWKFName]?req.query[oWKFName]:"notfound";
 	var lastDot = path.lastIndexOf('.');
 	if (lastDot > 0)

@@ -25,13 +25,13 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
 
 - **To read definition of a well-known field (WKF) named _p.geo.longitude_ (discover/conume)**:
 
-    http://omdo.cloudapp.net:8180/o.wkf/read?o.wkf.name=p.geo.longitude
+    http://omdo.cloudapp.net:8180/o.wkf/v.read?o.wkf.name=p.geo.longitude
   
   The above query is both a discovery request and a service request. When a registry or broker handles this request, it can return a 200 status code with actual service address to indicate a matching service offer. Or, it can directly forward the request to a service provider based on service request constraints such as QoS requirements. When a service provider handles this request, it directly returns the service response. 
 
 - **To calculate the sum of an array (discover/consume)**:
     
-    http://omdo.cloudapp.net:8280/o.wkf.numberlist/o.wkv.math.sum?m.value=1,2,3
+    http://omdo.cloudapp.net:8280/p.math.numberlist/v.math.sum?m.value=1,2,3
 
     This query calculates the sum of a number list. In this case, the _o.wkf.numberlist_ is a public WKF, and the _o.wkv.math.sum_ is a public WKV. _o.value_ is one of the few OMDO's reserved keywords that indicates the payload of a service call. 
 
@@ -43,7 +43,7 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
 
 - **To discover a service that can look up street address by a lat/long coordinate (discover/delegate/consume)**:
 
-    my.protocol://omdo.cloudapp.net/o.geo.coordinate/recall?m.values=37,-122&m.expected=o.geo.address&m.delegate=true
+    my.protocol://omdo.cloudapp.net/o.geo.coordinate/v.recall?m.values=37,-122&m.expected=o.geo.address&m.delegate=true
     
     This request locates and invokes a service that can project a lat/long coordinate to a street address. The _m.delegate_ parameter informs the service handler that the request can be forwarded to other service providers. This parameter enables distributed registries, service delegations as well as service gateways that provide high-availability/failover capabilities.
     
