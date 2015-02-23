@@ -23,19 +23,19 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
 
 ## Sample Discovery/Consumption requests
 
-- To read definition of a well-known field (WKF) named _p.geo.longitude_ (discover/conume):
+- **To read definition of a well-known field (WKF) named _p.geo.longitude_ (discover/conume)**:
 
     http://omdo.cloudapp.net:8180/o.wkf/read?o.wkf.name=p.geo.longitude
   
   The above query is both a discovery request and a service request. When a registry or broker handles this request, it can return a 200 status code with actual service address to indicate a matching service offer. Or, it can directly forward the request to a service provider based on service request constraints such as QoS requirements. When a service provider handles this request, it directly returns the service response. 
 
-- To calculate the sum of an array (discover/consume):
+- **To calculate the sum of an array (discover/consume)**:
     
     http://omdo.cloudapp.net:8280/o.wkf.numberlist/o.wkv.math.sum?m.value=1,2,3
 
     This query calculates the sum of a number list. In this case, the _o.wkf.numberlist_ is a public WKF, and the _o.wkv.math.sum_ is a public WKV. _o.value_ is one of the few OMDO's reserved keywords that indicates the payload of a service call. 
 
-- To discover a service that can approve an order (discover):
+- **To discover a service that can approve an order (discover)**:
 
     my.protocol://sales.contoso.com/contoso.order/contoso.approve&m.security=m.omb0404.3&m.qos=5-2000
     
