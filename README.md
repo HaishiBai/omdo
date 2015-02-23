@@ -37,13 +37,20 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
 
 - **To discover a service that can approve an order (discover)**:
 
-    my.protocol://sales.contoso.com/contoso.order/contoso.approve&m.security=m.omb0404.3&m.qos=5-2000
+    my.protocol://sales.contoso.com/contoso.order/contoso.approve&f.security=m.omb0404.3&f.qos=5-2000
     
     This query uses private WKFs and WKVs. It's seeking for a service that can approve (_contoso.approve_) an order (_contoso.order_). It also specifies that the service needs to have 99.999% availability with response time no longer than 2 seconds (_m.qos=5-2000_), and the service needs to mandate identity authentication assurance levels to be at least 3 (OMB 04-04). The sample also shows that OMDO can be used in other protocols in addition to HTTP(S).
 
 - **To discover a service that can look up street address by a lat/long coordinate (discover/delegate/consume)**:
 
-    my.protocol://omdo.cloudapp.net/o.geo.coordinate/v.recall?m.values=37,-122&m.expected=o.geo.address&m.delegate=true
+    my.protocol://omdo.cloudapp.net/o.geo.coordinate/v.recall?f.values=37,-122&f.expected=o.geo.address&f.delegate=true
     
     This request locates and invokes a service that can project a lat/long coordinate to a street address. The _m.delegate_ parameter informs the service handler that the request can be forwarded to other service providers. This parameter enables distributed registries, service delegations as well as service gateways that provide high-availability/failover capabilities.
+
+## Reserved WKFs
+
+   WKF  | meaning
+--------|--------
+f.value | TBD
+f.qos | TBD
     
