@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Haishi Bai <hbai@microsoft.com>
-ADD o.wkf /o.wkf
+ADD f /f
+ADD v /v
 ADD wkf-dict.sh /
 RUN chmod +x /wkf-dict.sh
 ADD wkf-dict.js /

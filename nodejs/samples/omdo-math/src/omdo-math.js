@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var mValue = 'm.value';
+var mValue = 'f.value';
 
 app.get('/p.math.numberlist/v.math.sum', function (req, res){
 	var numbers = req.query[mValue]?req.query[mValue].split(','):[];

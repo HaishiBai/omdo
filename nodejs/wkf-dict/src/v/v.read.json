@@ -1,0 +1,10 @@
+{
+	"name":"v.read",
+	"description":"Read an enity by given key.",
+	"inputs":
+		{
+			"f.wkf" : true,
+			"f.filter": true
+		},
+	"ouputs":"f.wkf"
+}

@@ -1,0 +1,6 @@
+{
+	"name":"p.math.numberlist",
+	"description":"List of numeric values, separated by commas (,)",
+	"type":"string",
+	"example": 1,-5932,24.68
+}

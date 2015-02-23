@@ -1,0 +1,6 @@
+{
+	"name":"v.math.sum",
+	"description":"Caulate the sum of a numeric list.",
+	"inputs":"p.math.numberlist",
+	"ouputs":"p.math.number"
+}

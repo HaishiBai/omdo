@@ -1,0 +1,6 @@
+{
+	"name":"f.id",
+	"description":"An identifier that can uniquely identify an entity.",
+	"type":"string",
+	"example": 66.32
+}

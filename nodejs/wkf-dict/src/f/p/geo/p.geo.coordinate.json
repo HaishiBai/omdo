@@ -1,0 +1,14 @@
+{
+	"name":"p.geo.coordinate",
+	"description":"A point on Earth expressed in latitude/longitdue pair (WGS84 geodetic datum).",
+	"type":
+		{
+			"p.geo.latitude":true,
+			"p.geo.longitude":true
+		}
+	"example": 
+		{
+			"p.geo.latidue": 37,
+			"p.geo.longitude":-122
+		}
+}

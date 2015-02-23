@@ -1,0 +1,6 @@
+{
+	"name":"f.field",
+	"description":"The name of a WKF field.",
+	"type": "string"
+	"example": "p.geo.latitude" 
+}

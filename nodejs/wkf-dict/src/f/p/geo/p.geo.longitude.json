@@ -1,0 +1,6 @@
+{
+	"name":"p.geo.longitude",
+	"description":"Longitude of a point on Earth (WGS84 geodetic datum), expressed in decimal form.",
+	"type":"numeric",
+	"example": -122.376
+}

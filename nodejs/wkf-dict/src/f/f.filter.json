@@ -1,0 +1,14 @@
+{
+	"name":"f.filter",
+	"description":"A filter that returns an specific entity.",
+	"type":
+		{
+			"f.field":true,
+			"f.value":true
+		},
+	"example": 
+		{
+			"f.field": "contoso.customer.id",
+			"f.value": "CUST-101246"
+		} 
+}

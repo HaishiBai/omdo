@@ -1,6 +1,0 @@
-{
-	"o.wkf.name":"p.geo.latitude",
-	"o.wkf.description":"Latitude of a point on Earth (WGS84 geodetic datum), expressed in decimal form.",
-	"o.wkf.type":"numeric",
-	"o.wkf.example": 66.32
-}

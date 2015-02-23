@@ -1,0 +1,10 @@
+{
+	"name":"f.value",
+	"description":"A WKF itself.The value can be a simple type if the WKF is a simple type, or a JSON object if the WKF is a complex type.",
+	"type": "any"
+	"example": 
+		{
+			p.geo.latitude = 37,
+			p.geo.longitude = -122
+		} 
+}
