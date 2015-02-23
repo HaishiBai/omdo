@@ -21,7 +21,7 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
     [TBD] Sample registry service
     [TBD] Sample delegation service
 
-## Sample Discovery requests
+## Sample Discovery/Consumption requests
 
 - To read definition of a well-known field (WKF) named _p.geo.longitude_ (discover/conume):
 
