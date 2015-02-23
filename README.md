@@ -4,7 +4,7 @@ OMDO is an open MicroServices discovery and orchestration system that allow sema
 
 -	**Simplicity**. No Semantic Web knowledge is required to make service offers or to discover services. Service offers and requests are all based on standard URLs. OMDO has not mandatory components or services. 
 -	**Flexibility**. A centralized service registry is not necessary. No data contract or service consumption negotiations are needed. No specical bindings or protocols are used. Everything is done through standard HTTP requests and optional JSON payloads.
--	**Efficiency**. Service discovery, delegation and consumption can be folded into a single HTTP request.
+-	**Efficiency**. Service discovery, delegation and consumption can be folded into a single HTTP request, with built-in QoS and authenticaiton/authorization requirement supports.
 
 ## Basic Concepts
 OMDO has three basic concepts:
@@ -34,4 +34,9 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
     http://omdo.cloudapp.net:8280/o.wkf.numberlist/o.wkv.math.sum?m.value=1,2,3
 
     This query calculates the sum of a number list. In this case, the _o.wkf.numberlist_ is a public WKF, and the _o.wkv.math.sum_ is a public WKV. _o.value_ is one of the few OMDO's reserved keywords that indicates the payload of a service call. 
+
+- To discover a service that can approve an order (discover):
+
+    my.protocol://sales.contoso.com/contoso.order/contoso.approve&m.security=m.omb0404.3&m.qos=5-2000
     
+    This query uses private WKFs and WKVs. It's seeking for a service that can approve (_contoso.approve_) an order (_contoso.order_). It also specifies that the service needs to have 99.999% availability with response time no longer than 2 seconds (_m.qos=5-2000_), and the service needs to mandate identity authentication assurance levels to be at least 3 (OMB 04-04). The sample also shows that OMDO can be used in other protocols in addition to HTTP(S).
