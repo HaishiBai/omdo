@@ -11,7 +11,7 @@ OMDO has three basic concepts:
 
 - **Well-Known Fields (WKF)**: A WKF is an entity whose meaning is implicitly understood by service providers and service requestors. OMDO provides a public dictionary where a number of WKFs are defined. A WKF dictionary is for human service designers only. It’s not used during service discovery or consumption processes. You don’t have to use OMDO’s dictionary – you don’t have to use a dictionary at all. All WKFs are implicitly defined in this case. 
 - **Well-known Verbs (WKV)**: A WKV is an operation that can be carried out on a WKF. OMDO provides a public list of WKVs such as “create”, “read” and “delete”. Similar to WFK, you can implicitly define WKVs for your own purposes. 
-- **Semantic URL (SURL)**: A SURL is a standard URL following a fixed routing scheme, in the format of _object_/_predicate_?_complement_ (_WKF_/_WKV_?_WKF_=value). A SURL can use used as both a discovery request and a service request, allowing discovery, delegation and consumption be folded into one HTTP request.
+- **Semantic URL (SURL)**: A SURL is a standard URL following a fixed routing scheme, in the format of _object_/_predicate_[?_complement_[&_complement]] (_WKF_/_WKV_?[_WKF_=value[$_WKF=value_]]). A SURL can use used as both a discovery request and a service request, allowing discovery, delegation and consumption be folded into one HTTP request.
 
 ## Getting Started
 The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO MicroServices containers:
