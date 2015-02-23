@@ -51,6 +51,9 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
 
    WKF  | meaning
 --------|--------
-f.value | TBD
-f.qos | TBD
+f.delegate|All discovery/service call to be forwarded
+f.directcall|Allow service to be directly invoked during discovery
+f.qos | Quality of Service (QoS) requirements
+f.security|Authentication/authorization requirements
+f.expected|Expected return WKF
     
