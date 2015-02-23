@@ -19,7 +19,7 @@ The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO
     sudo docker run -d -p 8180:8180 --name wkf omdo/wkf-dict node wkf-dict.js
     sudo docker run -d -p 8280:8280 --name math omdo/samples node omdo-math/omdo-math.js
     [TBD] Sample registry service
-    [TBD] Sample delegation service
+    [TBD] Sample delegate/gateway service
 
 ## Sample Discovery/Consumption requests
 
