@@ -17,19 +17,19 @@ OMDO has three basic concepts:
 The easiest way to run OMDO yourself is to use Docker to launch a number of OMDO MicroServices containers:
 
     sudo docker run -d -p 8180:8180 --name wkf omdo/wkf-dict node wkf-dict.js
+    sudo docker run -d -p 8280:8280 --name math omdo/samples node omdo-math/omdo-math.js
     [TBD] Sample registry service
     [TBD] Sample delegation service
-    sudo docker run -d -p 8280:8280 --name math omdo/samples node omdo-math/omdo-math.js
 
 ## Sample Discovery requests
 
-- To read definition of a well-known field (WKF) named _p.geo.longitude_:
+- To read definition of a well-known field (WKF) named _p.geo.longitude_ (discover/conume):
 
     http://omdo.cloudapp.net:8180/o.wkf/read?o.wkf.name=p.geo.longitude
   
   The above query is both a discovery request and a service request. When a registry or broker handles this request, it can return a 200 status code with actual service address to indicate a matching service offer. Or, it can directly forward the request to a service provider based on service request constraints such as QoS requirements. When a service provider handles this request, it directly returns the service response. 
 
-- To calculate the sum of an array:
+- To calculate the sum of an array (discover/consume):
     
     http://omdo.cloudapp.net:8280/o.wkf.numberlist/o.wkv.math.sum?m.value=1,2,3
 
